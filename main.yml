@@ -1,0 +1,23 @@
+---
+- hosts: localhost
+  user: '{{ username }}'
+  connection: local
+
+  vars_files:
+    - vars/main.yml
+    - vars/local.yml
+
+  roles:
+    - geerlingguy.mac.homebrew	
+
+  tasks:
+    # Configure Git
+    - name: "Set default branch"
+      command: git config --global init.defaultBranch main
+
+    - name: "Set Git name"
+      command: "git config --global user.name '{{ git_name }}'"
+
+    - name: "Set Git mail"
+      command: "git config --global user.email '{{ git_email }}'"	
+

@@ -1,0 +1,22 @@
+# Setup
+When your run this playbook on a new Mac, make sure to install the prerequisites:
+
+*Install brew*
+```
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+*Install Ansible*
+```
+brew install ansible
+```
+
+*Install Ansible requirements*
+```
+ansible-galaxy install -r requirements.yml
+```
+
+## Run run run
+```
+ansible-playbook main.yml --ask-become-pass
+```
