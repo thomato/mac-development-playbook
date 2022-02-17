@@ -21,3 +21,11 @@
     - name: "Set Git mail"
       command: "git config --global user.email '{{ git_email }}'"	
 
+    - name: "Create SSH key"
+      openssh_keypair:
+        path: "~/.ssh/id_rsa"
+        type: rsa
+        size: 4096
+        state: present
+        force: no
+
