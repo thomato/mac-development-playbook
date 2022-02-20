@@ -21,3 +21,6 @@ Now everything is good to go... RUN RUN RUN it!
 ```
 ansible-playbook main.yml --ask-become-pass
 ```
+
+## Known problems
+When some applications have been installed manually, brew may complain. Either remove the application and install again with brew, or remove the application from `vars/main.yml`.
