@@ -22,5 +22,15 @@ Now everything is good to go... RUN RUN RUN it!
 ansible-playbook main.yml --ask-become-pass
 ```
 
+## What is installed?
+This playbook installs:
+- git
+- iTerm 2
+
+This playbook configures:
+
+*Git*
+Sets the default branch to 'main' and sets your user's name and e-mail (according to the values in `git_name` and `git_email`).
+
 ## Known problems
 When some applications have been installed manually, brew may complain. Either remove the application and install again with brew, or remove the application from `vars/main.yml`.
