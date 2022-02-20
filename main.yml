@@ -28,4 +28,5 @@
         size: 4096
         state: present
         force: no
+      ignore_errors: yes
 
