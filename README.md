@@ -7,8 +7,10 @@ First, make sure that Brew is installed as this playbook depends on it heavily:
 ```
 
 Before Ansible can install stuff using Brew, we first need Brew to install Ansible :)
+Also, Git may need to be installed to download the playbook.
 ```
 brew install ansible
+brew install git
 ```
 
 After Ansible is installed, we need to install the roles that this playbook needs:
