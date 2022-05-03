@@ -22,6 +22,8 @@ Now everything is good to go... RUN RUN RUN it!
 ansible-playbook main.yml --ask-become-pass
 ```
 
+Fill vars/local.yml Copy vars/local.yml.dist to vars/local.yml and change the variables to your choosing.
+
 ## What is installed?
 This playbook installs:
 - git
