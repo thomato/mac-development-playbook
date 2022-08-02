@@ -1,6 +1,9 @@
 ---
 homebrew_installed_packages:
   - git
+  - tree
+  - wget
+  - cocoapods
 
 homebrew_taps:
   - homebrew/core
@@ -13,4 +16,6 @@ homebrew_cask_apps:
   - cyberduck
   - google-chrome
   - firefox-developer-edition
+  - android-studio
+  - phpstorm
 
