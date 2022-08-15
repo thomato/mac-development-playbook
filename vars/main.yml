@@ -13,9 +13,3 @@ homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - iterm2
   - docker
-  - cyberduck
-  - google-chrome
-  - firefox-developer-edition
-  - android-studio
-  - phpstorm
-
