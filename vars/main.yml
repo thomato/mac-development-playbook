@@ -13,3 +13,4 @@ homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - iterm2
   - docker
+  - jetbrains-toolbox
