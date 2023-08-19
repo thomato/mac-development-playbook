@@ -18,6 +18,8 @@ After Ansible is installed, we need to install the roles that this playbook need
 ansible-galaxy install -r requirements.yml
 ```
 
+Copy your `local.yml.dist` to `local.yml` and change the values in here. 
+
 ## Run run run
 Now everything is good to go... RUN RUN RUN it!
 ```
