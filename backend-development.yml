@@ -1,0 +1,11 @@
+---
+- hosts: localhost
+  user: '{{ username }}'
+  connection: local
+
+  vars_files:
+    - vars/backend-development.yml
+    - vars/local.yml
+
+  roles:
+    - geerlingguy.mac.homebrew	

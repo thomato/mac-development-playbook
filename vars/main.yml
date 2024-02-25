@@ -5,14 +5,10 @@ homebrew_installed_packages:
   - wget
   - cocoapods
 
-homebrew_taps:
-  - homebrew/core
-  - homebrew/cask
-
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - iterm2
   - docker
   - jetbrains-toolbox
 
-homebrew_upgrade_all_packages: true
+#homebrew_upgrade_all_packages: true

@@ -30,3 +30,27 @@
         force: no
       ignore_errors: yes
 
+    # Setup Oh My ZSH
+    - name: Check if oh-my-zsh is installed
+      stat:
+        path: ~/.oh-my-zsh/
+      register: oh_my_zsh
+
+    - name: Install Oh My ZSH
+      shell: sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+      when: not oh_my_zsh.stat.exists
+
+    - name: ZSH Autosuggestions
+      shell: git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+      when: not oh_my_zsh.stat.exists
+
+    - name: Append git to plugins in .zshrc
+      lineinfile:
+        path: ~/.zshrc
+        regexp: '^plugins='
+        line: 'plugins=(git bundler dotenv rake rbenv ruby npm zsh-autosuggestions)'
+        backup: yes
+
+    - name: Reload .zshrc
+      shell: source ~/.zshrc
+      when: oh_my_zsh.stat.exists

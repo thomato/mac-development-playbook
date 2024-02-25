@@ -18,12 +18,16 @@ After Ansible is installed, we need to install the roles that this playbook need
 ansible-galaxy install -r requirements.yml
 ```
 
-Copy your `local.yml.dist` to `local.yml` and change the values in here. 
+Copy your `local.yml.dist` to `local.yml` and change the values in here.
+
+## Decide what playbook to run
+- The *backend* playbook installs the basic tools for backend development (including API development), such as:
+  - Postman
 
 ## Run run run
 Now everything is good to go... RUN RUN RUN it!
 ```
-ansible-playbook main.yml --ask-become-pass
+ansible-playbook <playbook>.yml --ask-become-pass
 ```
 
 Fill vars/local.yml Copy vars/local.yml.dist to vars/local.yml and change the variables to your choosing.
@@ -32,6 +36,7 @@ Fill vars/local.yml Copy vars/local.yml.dist to vars/local.yml and change the va
 This playbook installs:
 - git
 - iTerm 2
+- Oh My ZSH with the Git plugin
 
 This playbook configures:
 
